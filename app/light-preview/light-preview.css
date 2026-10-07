@@ -1,0 +1,126 @@
+/* Experimental light homepage. Production homepage remains untouched. */
+.light-preview-shell{
+  --light-bg:#edf1f4;
+  --light-bg-soft:#f7f9fa;
+  --light-surface:rgba(250,252,253,.94);
+  --light-surface-soft:rgba(232,237,241,.84);
+  --light-ink:#172536;
+  --light-ink-2:#526170;
+  --light-muted:#788592;
+  --light-border:rgba(23,37,54,.12);
+  --light-accent:#31566f;
+  --light-accent-strong:#203f55;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(247,249,250,.08),rgba(247,249,250,.08)),
+    url("/images/themes/light/khorshid-light-background.jpg") center top / cover fixed no-repeat;
+  color:var(--light-ink);
+}
+.light-preview-shell .solar-motion{background:transparent!important;color:var(--light-ink)}
+.light-preview-shell .solar-hero-image{display:none!important}
+.light-preview-shell .solar-hero::after{
+  background:
+    radial-gradient(circle at 72% 38%,rgba(49,86,111,.08),transparent 28%),
+    radial-gradient(circle at 52% 58%,rgba(72,104,128,.05),transparent 38%);
+  mix-blend-mode:multiply;
+}
+.light-preview-shell .solar-progress{background:linear-gradient(90deg,#31566f,#7c9bb0)}
+.light-preview-shell .solar-kicker,
+.light-preview-shell .eyebrow{color:var(--light-accent)!important}
+.light-preview-shell .solar-hero h1,
+.light-preview-shell .solar-hero h1 span{
+  background:linear-gradient(110deg,#172536 0%,#31566f 58%,#526f82 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent!important;text-shadow:none;
+}
+.light-preview-shell .solar-lead,.light-preview-shell .solar-hero-action-lead{color:var(--light-ink-2)!important}
+.light-preview-shell .solar-scroll-hint{color:var(--light-muted)}
+.light-preview-shell .solar-scroll-hint span{background:linear-gradient(var(--light-accent),transparent);box-shadow:none}
+.light-preview-shell .solar-scene,.light-preview-shell .solar-capacity,.light-preview-shell .solar-mission,
+.light-preview-shell .solar-corporate,.light-preview-shell .solar-projects,.light-preview-shell .solar-events,
+.light-preview-shell .solar-honors,.light-preview-shell .solar-footer{background:transparent!important}
+.light-preview-shell .solar-motion p:not(.solar-kicker):not(.solar-scroll-hint),
+.light-preview-shell .solar-intro>div:nth-child(2)>p:last-child,.light-preview-shell .mission-intro,
+.light-preview-shell .corporate-heading>p,.light-preview-shell .solar-scene-head>p,
+.light-preview-shell .community-lead,.light-preview-shell .project-empty p,.light-preview-shell .arms-summary p{color:var(--light-ink-2)!important}
+.light-preview-shell .solar-intro .intro-lead{color:var(--light-ink)!important}
+.light-preview-shell .solar-statement{border-color:var(--light-border);color:var(--light-ink);background:rgba(255,255,255,.35)}
+.light-preview-shell .solar-statement b{color:var(--light-muted)}
+.light-preview-shell .solar-statement span{color:var(--light-accent)}
+.light-preview-shell .solar-intro:before,.light-preview-shell .solar-intro:after{border-color:rgba(23,37,54,.07);box-shadow:0 0 100px rgba(49,86,111,.05)}
+.light-preview-shell .capacity-grid>div{border-color:var(--light-border)!important;background:rgba(255,255,255,.38)}
+.light-preview-shell .capacity-grid strong{color:var(--light-accent)!important}
+.light-preview-shell .capacity-grid span{color:var(--light-muted)!important}
+.light-preview-shell .capacity-mission{color:var(--light-ink-2)!important}
+.light-preview-shell .capacity-mission b{color:var(--light-ink)!important}
+.light-preview-shell .mission-featured-label,.light-preview-shell .mission-secondary-label{color:var(--light-ink)!important}
+.light-preview-shell .mission-featured-label i,.light-preview-shell .mission-secondary-label i{background:linear-gradient(90deg,rgba(49,86,111,.7),transparent)!important}
+.light-preview-shell .mission-card,.light-preview-shell .mission-secondary-card,.light-preview-shell .arms-card,
+.light-preview-shell .community-card,.light-preview-shell .partner-card,.light-preview-shell .corporate-options article,
+.light-preview-shell .latest-announcement-card,.light-preview-shell .project-empty,.light-preview-shell .event-empty{
+  background:rgba(250,252,253,.92)!important;
+  border:1px solid var(--light-border)!important;
+  box-shadow:0 16px 44px rgba(23,37,54,.075);
+  backdrop-filter:blur(8px);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.light-preview-shell .mission-card:hover,.light-preview-shell .mission-secondary-card:hover,.light-preview-shell .arms-card:hover,
+.light-preview-shell .community-card:hover,.light-preview-shell .partner-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(49,86,111,.28)!important;
+  background:#fff!important;
+  box-shadow:0 22px 52px rgba(23,37,54,.11);
+}
+.light-preview-shell .mission-card-body h3,.light-preview-shell .mission-secondary-body h3,.light-preview-shell .arms-card-body h3,
+.light-preview-shell .community-card-body h3,.light-preview-shell .corporate-options h3,
+.light-preview-shell .latest-announcement-card__body h3{color:var(--light-ink)!important;font-weight:750;text-shadow:none!important}
+.light-preview-shell .mission-card-body>p,.light-preview-shell .mission-secondary-body p,.light-preview-shell .arms-card-body p,
+.light-preview-shell .community-card-body p,.light-preview-shell .corporate-options p,.light-preview-shell .latest-announcement-card__body p{
+  color:var(--light-ink-2)!important;line-height:1.95;
+}
+.light-preview-shell .mission-card-body>button{color:var(--light-accent)!important}
+.light-preview-shell .mission-detail,.light-preview-shell .mission-detail>div{border-color:var(--light-border)!important}
+.light-preview-shell .mission-detail strong{color:var(--light-accent)!important}
+.light-preview-shell .mission-detail span{color:var(--light-ink-2)!important}
+.light-preview-shell .solar-actions a,.light-preview-shell .solar-primary-link{
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#31566f,#203f55)!important;
+  color:#fff!important;
+  border:0!important;
+  box-shadow:0 10px 26px rgba(32,63,85,.18);
+}
+.light-preview-shell .solar-actions a:hover,.light-preview-shell .solar-primary-link:hover{
+  background:linear-gradient(135deg,#294b62,#1c384b)!important;
+  box-shadow:0 14px 32px rgba(32,63,85,.23);
+  transform:translateY(-1px);
+}
+.light-preview-shell .solar-actions a.ghost{
+  border-radius:999px!important;
+  background:rgba(255,255,255,.82)!important;
+  color:var(--light-ink)!important;
+  border:1px solid var(--light-border)!important;
+  box-shadow:0 6px 18px rgba(23,37,54,.05);
+}
+.light-preview-shell .trust-more-link,.light-preview-shell .solar-primary-link{color:#fff!important}
+.light-preview-shell .trust-more-link{color:var(--light-accent)!important;border-color:rgba(49,86,111,.24)!important}
+.light-preview-shell .trust-more-link:hover{color:var(--light-accent-strong)!important}
+.light-preview-shell .project-empty,.light-preview-shell .event-empty{color:var(--light-ink-2)!important}
+.light-preview-shell .project-empty span{color:var(--light-accent)!important}
+.light-preview-shell .project-empty h3{color:var(--light-ink)!important}
+.light-preview-shell .partner-card img{background:#fff}
+.light-preview-shell .solar-footer{border-top:1px solid var(--light-border)!important;background:rgba(246,248,250,.68)!important}
+.light-preview-shell .solar-footer h2{color:var(--light-ink)!important}
+.light-preview-shell .solar-footer>p:not(.solar-kicker){color:var(--light-ink-2)!important}
+.light-preview-shell .solar-footer footer{color:var(--light-muted)!important;border-color:var(--light-border)!important}
+.light-preview-shell .latest-announcements__head h2{color:var(--light-ink)!important}
+.light-preview-shell .latest-announcements__head>a{color:var(--light-accent)!important}
+.light-preview-shell .latest-announcement-card__body time,.light-preview-shell .latest-announcement-card__body p{color:var(--light-ink-2)!important}
+.light-preview-shell .latest-announcement-card__body h3,.light-preview-shell .latest-announcement-card__body>a{color:var(--light-ink)!important}
+.light-preview-shell h1,.light-preview-shell h2,.light-preview-shell h3,.light-preview-shell h4{letter-spacing:-.025em}
+.light-preview-shell .solar-kicker,.light-preview-shell .eyebrow{letter-spacing:.04em;font-weight:700}
+.light-preview-shell .solar-hero h1{font-weight:800;line-height:1.08}
+.light-preview-shell .solar-lead,.light-preview-shell .mission-intro,.light-preview-shell .corporate-heading>p,.light-preview-shell .community-lead{line-height:2}
+body:has(.light-preview-shell){background:#edf1f4!important}
+body:has(.light-preview-shell)::before{display:none!important}
+@media(max-width:600px){
+  .light-preview-shell{background:linear-gradient(rgba(247,249,250,.08),rgba(247,249,250,.08)),url("/images/themes/light/khorshid-light-background.jpg") center top / auto 100% no-repeat;background-attachment:scroll}
+}

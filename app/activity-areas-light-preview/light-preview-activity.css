@@ -1,0 +1,49 @@
+/* Experimental light activity-areas preview. Production page remains untouched. */
+.activity-light-preview-shell{
+  --lp-bg:#edf1f4;
+  --lp-surface:rgba(250,252,253,.94);
+  --lp-ink:#172536;
+  --lp-ink-2:#526170;
+  --lp-muted:#788592;
+  --lp-accent:#31566f;
+  --lp-accent-strong:#203f55;
+  --lp-border:rgba(23,37,54,.12);
+  min-height:100vh;
+  background:linear-gradient(rgba(247,249,250,.08),rgba(247,249,250,.08)),url("/images/themes/light/khorshid-light-background.jpg") center top / cover fixed no-repeat;
+  color:var(--lp-ink);
+}
+body:has(.activity-light-preview-shell){background:var(--lp-bg)!important}
+.activity-light-preview-shell main{background:transparent!important;color:var(--lp-ink)}
+.activity-light-preview-shell .container-site{position:relative;z-index:1}
+.activity-light-preview-shell section.border-b,.activity-light-preview-shell section.border-t{border-color:var(--lp-border)!important}
+.activity-light-preview-shell .eyebrow{color:var(--lp-accent)!important;letter-spacing:.04em;font-weight:700}
+.activity-light-preview-shell h1,.activity-light-preview-shell h2,.activity-light-preview-shell h3,.activity-light-preview-shell h4{color:var(--lp-ink)!important;letter-spacing:-.025em;font-weight:750}
+.activity-light-preview-shell p,.activity-light-preview-shell li{color:var(--lp-ink-2)!important;line-height:1.95}
+.activity-light-preview-shell .text-\[\#A9B7C3\],.activity-light-preview-shell .text-\[\#aab7c3\],.activity-light-preview-shell .text-\[\#8f9eab\],.activity-light-preview-shell .text-\[\#728292\]{color:var(--lp-muted)!important}
+.activity-light-preview-shell .btn-primary{
+  background:linear-gradient(135deg,#31566f,#203f55)!important;
+  color:#fff!important;border-color:#203f55!important;border-radius:999px;box-shadow:0 10px 26px rgba(32,63,85,.18)
+}
+.activity-light-preview-shell .glass,.activity-light-preview-shell article.rounded-2xl{
+  background:rgba(250,252,253,.94)!important;
+  border:1px solid var(--lp-border)!important;
+  box-shadow:0 16px 44px rgba(23,37,54,.075)!important;
+  backdrop-filter:blur(8px);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.activity-light-preview-shell article.rounded-2xl:hover{
+  transform:translateY(-3px);
+  border-color:rgba(49,86,111,.28)!important;
+  box-shadow:0 22px 52px rgba(23,37,54,.11)!important;
+}
+.activity-light-preview-shell details summary{color:var(--lp-accent)!important;font-weight:700}
+.activity-light-preview-shell details div{border-color:rgba(49,86,111,.20)!important}
+.activity-light-preview-shell section:has(img[src*="areas-focus-about-hero2"]) > .absolute.inset-0{display:none!important}
+.activity-light-preview-shell .site-grid{background:transparent!important}
+.activity-light-preview-shell .site-grid:before,.activity-light-preview-shell .site-grid:after{opacity:.10}
+.activity-light-preview-shell footer{background:rgba(246,248,250,.86)!important;border-color:var(--lp-border)!important;color:var(--lp-ink-2)!important}
+.activity-light-preview-shell footer a{color:var(--lp-ink-2)!important}
+/* Header is intentionally untouched: no preview rule changes layout, buttons, or menu behavior. */
+@media(max-width:600px){
+  .activity-light-preview-shell{background:linear-gradient(rgba(247,249,250,.08),rgba(247,249,250,.08)),url("/images/themes/light/khorshid-light-background.jpg") center top / auto 100% no-repeat;background-attachment:scroll}
+}

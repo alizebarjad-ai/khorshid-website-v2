@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="100" viewBox="0 0 150 100">
+  <g opacity="0.05">
+    <g transform="translate(10 8) scale(0.27)">
+      <circle cx="80" cy="80" r="34" fill="none" stroke="#14213D" stroke-width="6"/>
+      <g stroke="#14213D" stroke-width="6" stroke-linecap="round">
+        <path d="M80 10v22M80 128v22M10 80h22M128 80h22M30 30l16 16M114 114l16 16M130 30l-16 16M46 114l-16 16"/>
+      </g>
+    </g>
+    <g transform="translate(75 8) scale(0.27)">
+      <circle cx="80" cy="80" r="34" fill="none" stroke="#14213D" stroke-width="6"/>
+      <g stroke="#14213D" stroke-width="6" stroke-linecap="round">
+        <path d="M80 10v22M80 128v22M10 80h22M128 80h22M30 30l16 16M114 114l16 16M130 30l-16 16M46 114l-16 16"/>
+      </g>
+    </g>
+    <g transform="translate(42 58) scale(0.27)">
+      <circle cx="80" cy="80" r="34" fill="none" stroke="#14213D" stroke-width="6"/>
+      <g stroke="#14213D" stroke-width="6" stroke-linecap="round">
+        <path d="M80 10v22M80 128v22M10 80h22M128 80h22M30 30l16 16M114 114l16 16M130 30l-16 16M46 114l-16 16"/>
+      </g>
+    </g>
+    <g transform="translate(107 58) scale(0.27)">
+      <circle cx="80" cy="80" r="34" fill="none" stroke="#14213D" stroke-width="6"/>
+      <g stroke="#14213D" stroke-width="6" stroke-linecap="round">
+        <path d="M80 10v22M80 128v22M10 80h22M128 80h22M30 30l16 16M114 114l16 16M130 30l-16 16M46 114l-16 16"/>
+      </g>
+    </g>
+  </g>
+</svg>

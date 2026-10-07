@@ -1,0 +1,3 @@
+html,body{min-height:100%;background-color:transparent!important}
+body{margin:0;background:transparent!important}
+@media(max-width:767px){body{background-attachment:scroll}}
