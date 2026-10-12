@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
 import { PageStructuredData } from "@/components/page-structured-data";
 
@@ -103,12 +104,12 @@ export default function MediaPage() {
               <p className="max-w-3xl text-[14px] leading-8 text-[#4D5B77] md:text-[15px]">
                 استودیو تولید خورشید، فضای عملیاتی بازوی رسانه برای ضبط و تولید برنامه‌های تصویری، گفت‌وگو، مستند و محتوای فرهنگی و اجتماعی است. این ظرفیت کمک می‌کند ایده‌ها و روایت‌های خورشید در یک محیط تولید مشخص به خروجی حرفه‌ای تبدیل شوند.
               </p>
-              <a
+              <Link
                 href="/media/studio"
                 className="mt-5 inline-flex text-[13px] font-bold text-[#4A78B0] transition hover:text-white"
               >
                 معرفی استودیو تولید خورشید <span className="mr-2">←</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -206,12 +207,12 @@ export default function MediaPage() {
                 است و تلویزیون اینترنتی مسیر انتشار برنامه‌ها و مجموعه‌های
                 تصویری را تکمیل می‌کند.
               </p>
-              <a
+              <Link
                 href="/tv"
                 className="mt-5 inline-flex text-[13px] font-bold text-[#4A78B0] transition hover:text-white"
               >
                 مشاهده تلویزیون اینترنتی <span className="mr-2">←</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -242,12 +243,12 @@ export default function MediaPage() {
                   ),
                 )}
               </div>
-              <a
+              <Link
                 href="/participation#form"
                 className="mt-6 inline-flex text-[13px] font-bold text-[#4A78B0] transition hover:text-white"
               >
                 شروع یک همکاری رسانه‌ای <span className="mr-2">←</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -262,12 +263,12 @@ export default function MediaPage() {
               اطلاعات اولیه را ثبت کنید تا موضوع بررسی و درباره مدل مناسب
               تولید، پوشش یا مستندسازی با شما هماهنگ شود.
             </p>
-            <a
+            <Link
               href="/participation#form"
               className="btn-primary mt-6 inline-flex px-6 py-3 text-[13px]"
             >
               ثبت درخواست
-            </a>
+            </Link>
           </div>
         </section>
       </div>
