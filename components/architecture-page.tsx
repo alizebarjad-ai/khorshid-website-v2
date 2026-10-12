@@ -250,15 +250,15 @@ export function ArchitecturePage({ slug }: { slug: string }) {
           <div className="absolute inset-0 bg-gradient-to-l from-[#FFFFFF]/65 via-[#FFFFFF]/28 to-transparent" />
         </div>
       )}
-      <div className="container-site relative py-16 md:py-24">
+      <div className={`container-site relative ${(slug === "contact" || slug === "activity-areas" || slug === "arms" || slug === "tv") ? "py-10 md:py-24" : "py-16 md:py-24"}`}>
         <p className="eyebrow">{spec.eyebrow}</p>
-        <h1 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.6] tracking-tight md:text-[50px]">{spec.title}</h1>
+        <h1 className={`mt-4 max-w-4xl font-extrabold leading-[1.6] tracking-tight ${(slug === "contact" || slug === "activity-areas" || slug === "arms" || slug === "tv") ? "text-[29px] sm:text-[34px] md:text-[50px]" : "text-[34px] md:text-[50px]"}`}>{spec.title}</h1>
         <ExpandableIntro text={spec.intro} expanded={slug !== "arms"} />
         {spec.cta && <div className={`mt-7 ${slug === "tv" ? "w-full sm:w-auto" : ""}`}><a className={`btn-primary px-6 py-3 text-center text-[13px] ${slug === "tv" ? "flex w-full justify-center sm:inline-flex sm:w-auto" : ""}`} href={spec.cta.href}>{spec.cta.label}</a></div>}
       </div>
     </section>
 
-    <div className="container-site py-14 md:py-20">
+    <div className={`container-site ${(slug === "contact" || slug === "activity-areas" || slug === "arms" || slug === "tv") ? "py-10 md:py-20" : "py-14 md:py-20"}`}>
       {slug === "about" ? (
         <>
           {spec.sections?.map((section) => (
