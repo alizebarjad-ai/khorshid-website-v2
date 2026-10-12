@@ -60,8 +60,8 @@ export function SocialProjectsArmPage() {
           <img src="/images/arms/social-projects-arm2.jpg" alt="تصویر بازوی توسعه پروژه‌های اجتماعی خورشید مفاخر" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-l from-[#FFFFFF]/90 via-[#FFFFFF]/55 to-[#FFFFFF]/15" />
-        <div className="relative min-h-[540px]">
-          <div className="container-site flex min-h-[540px] items-end py-16 md:py-24">
+        <div className="relative min-h-[470px] md:min-h-[540px]">
+          <div className="container-site flex min-h-[470px] items-end py-10 md:min-h-[540px] md:py-24">
             <div className="max-w-4xl">
               <p className="eyebrow">بازوی توسعه پروژه‌های اجتماعی</p>
               <h1 className="mt-4 text-[34px] font-extrabold leading-[1.55] tracking-tight md:text-[54px]">
@@ -76,8 +76,8 @@ export function SocialProjectsArmPage() {
         </div>
       </section>
 
-      <div className="container-site py-14 md:py-20">
-        <section className="grid gap-8 border-b border-white/8 pb-14 md:pb-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-start reveal">
+      <div className="container-site py-10 md:py-20">
+        <section className="grid gap-5 border-b border-white/8 pb-10 md:gap-8 md:pb-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-start reveal">
           <div>
             <p className="eyebrow">نقش این بازو</p>
             <h2 className="mt-3 text-[27px] font-extrabold leading-[1.7] md:text-[40px]">مسئله اجتماعی را به پروژه قابل اجرا تبدیل می‌کنیم.</h2>
@@ -88,12 +88,12 @@ export function SocialProjectsArmPage() {
           />
         </section>
 
-        <section className="pt-14 md:pt-20 reveal">
-          <div className="mb-10 max-w-3xl">
+        <section className="pt-10 md:pt-20 reveal">
+          <div className="mb-6 max-w-3xl md:mb-10">
             <p className="eyebrow">مسیر اجرا</p>
             <h2 className="mt-3 text-[27px] font-extrabold leading-[1.7] md:text-[40px]">از مسئله تا اثر، با یک مسیر روشن</h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-5">
+          <div className="grid gap-5 md:grid-cols-5 md:gap-8">
             {steps.map(([title, text], index) => (
               <article key={title} className="border-t border-[#4A78B0]/40 pt-5 reveal">
                 <span className="text-[12px] font-bold text-[#4A78B0]">مرحله {"۰۱۲۳۴۵۶۷۸۹"[index + 1]}</span>
@@ -104,7 +104,7 @@ export function SocialProjectsArmPage() {
           </div>
         </section>
 
-        <section className="mt-16 border-t border-white/8 pt-14 md:mt-24 md:pt-20 reveal">
+        <section className="mt-12 border-t border-white/8 pt-10 md:mt-24 md:pt-20 reveal">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
               <p className="eyebrow">حوزه‌های پروژه</p>
@@ -133,7 +133,7 @@ export function SocialProjectsArmPage() {
               این بخش محل نمایش پروژه‌های واقعی خورشید خواهد بود؛ نه نمونه‌های ساختگی. با شکل‌گیری پروژه‌ها، هر مورد بر اساس وضعیت خود در یکی از این سه مسیر قرار می‌گیرد.
             </p>
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-7 grid gap-4 md:mt-10 md:gap-6 lg:grid-cols-3">
             {projectStates.map(([title, text]) => (
               <article key={title} className="min-h-[220px] rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-7">
                 <p className="text-[12px] font-bold text-[#4A78B0]">آرشیو در حال تکمیل</p>
@@ -144,7 +144,7 @@ export function SocialProjectsArmPage() {
           </div>
         </section>
 
-        <section className="mt-16 grid gap-8 border-t border-white/8 pt-14 md:mt-24 md:pt-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-start reveal">
+        <section className="mt-12 grid gap-5 border-t border-white/8 pt-10 md:mt-24 md:gap-8 md:pt-20 lg:grid-cols-[0.8fr_1.2fr] lg:items-start reveal">
           <div>
             <p className="eyebrow">ظرفیت اجرایی</p>
             <h2 className="mt-3 text-[27px] font-extrabold leading-[1.7] md:text-[38px]">یک بازو، در اتصال با کل ظرفیت خورشید</h2>
@@ -158,7 +158,7 @@ export function SocialProjectsArmPage() {
                 <span key={item} className="rounded-full border border-[#4A78B0]/25 px-4 py-2 text-[12px] text-[#4D5B77]">{item}</span>
               ))}
             </div>
-            <a href="/arms" className="btn-primary mt-7 inline-flex px-5 py-3 text-[13px]">مشاهده همه بازوهای اجرایی</a>
+            <a href="/arms" className="btn-primary mt-7 flex w-full justify-center px-5 py-3 text-center text-[13px] sm:inline-flex sm:w-auto">مشاهده همه بازوهای اجرایی</a>
           </div>
         </section>
 
@@ -168,8 +168,8 @@ export function SocialProjectsArmPage() {
           <p className="mt-5 max-w-3xl text-[14px] leading-8 text-[#4D5B77] md:text-[15px]">
             شرکت‌ها، سازمان‌ها، دانشگاه‌ها، گروه‌های تخصصی، حامیان و هنرمندان می‌توانند از مسیر مشارکت، موضوع یا ظرفیت خود را برای بررسی و طراحی همکاری مطرح کنند.
           </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href="/participation#form" className="btn-primary px-6 py-3 text-[13px]">ثبت درخواست همکاری</a>
+          <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap">
+            <a href="/participation#form" className="btn-primary flex w-full justify-center px-6 py-3 text-center text-[13px] sm:inline-flex sm:w-auto">ثبت درخواست همکاری</a>
             <a href="/partnership" className="btn-primary px-6 py-3 text-[13px]">همکاری سازمانی و راهبردی</a>
           </div>
         </section>
