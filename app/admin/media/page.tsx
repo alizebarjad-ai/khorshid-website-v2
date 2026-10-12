@@ -12,13 +12,27 @@ export default function MediaAdmin() {
   const [message, setMessage] = useState("");
 
   async function load() {
-    setLoading(true);
     const r = await fetch("/api/admin/media");
     if (r.ok) setFiles((await r.json()).files);
     setLoading(false);
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    let cancelled = false;
+    async function initialLoad() {
+      try {
+        const r = await fetch("/api/admin/media");
+        if (r.ok) {
+          const data = await r.json();
+          if (!cancelled) setFiles(data.files);
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+    initialLoad();
+    return () => { cancelled = true; };
+  }, []);
 
   async function upload(file?: File) {
     if (!file) return;
