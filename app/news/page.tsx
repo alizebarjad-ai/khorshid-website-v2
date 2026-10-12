@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 import { getActiveAnnouncements } from "@/lib/announcements";
 
 const BASE = "https://www.khorshid-mafakher.ir";
@@ -70,7 +71,7 @@ export default async function NewsPage() {
                     </div>
                     <h2>{item.title}</h2>
                     <p>{item.excerpt}</p>
-                    <a className="btn-primary" href={item.href}>مشاهده جزئیات <span>←</span></a>
+                    <Link className="btn-primary" href={item.href}>مشاهده جزئیات <span>←</span></Link>
                   </div>
                 </article>
               ))}
