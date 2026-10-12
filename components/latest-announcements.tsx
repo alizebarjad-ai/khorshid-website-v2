@@ -1,4 +1,5 @@
 import type { Announcement } from "@/types/announcement";
+import Link from "next/link";
 type LatestAnnouncementsProps = {
   items: Announcement[];
 };
@@ -13,7 +14,7 @@ export function LatestAnnouncements({ items }: LatestAnnouncementsProps) {
           <p className="solar-kicker">آخرین اخبار و اطلاعیه‌ها</p>
           <h2 id="latest-announcements-title">آنچه تازه در خورشید اتفاق افتاده است</h2>
         </div>
-        <a href="/news">آرشیو اخبار و اطلاعیه‌ها <span aria-hidden="true">←</span></a>
+        <Link href="/news">آرشیو اخبار و اطلاعیه‌ها <span aria-hidden="true">←</span></Link>
       </div>
       <div className="latest-announcements__grid">
         {items.map((item) => (
