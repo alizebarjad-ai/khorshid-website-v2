@@ -224,7 +224,7 @@ export function ArchitecturePage({ slug }: { slug: string }) {
   return <SiteShell>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
     {faqStructuredData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />}
-    <section className={(slug === "areas-focus/about" || slug === "activity-areas") ? "relative min-h-[560px] overflow-hidden border-b border-[#14213D]/10 reveal md:min-h-[650px]" : slug === "arms" || slug === "tv" ? "relative min-h-[560px] overflow-hidden border-b border-white/10 reveal md:min-h-[680px]" : "site-grid border-b border-[#14213D]/10 reveal"}>
+    <section className={(slug === "areas-focus/about" || slug === "activity-areas") ? "relative min-h-[560px] overflow-hidden border-b border-[#14213D]/10 reveal md:min-h-[650px]" : slug === "arms" ? "relative min-h-[560px] overflow-hidden border-b border-white/10 reveal md:min-h-[680px]" : slug === "tv" ? "relative min-h-[500px] overflow-hidden border-b border-white/10 reveal md:min-h-[680px]" : "site-grid border-b border-[#14213D]/10 reveal"}>
       {(slug === "areas-focus/about" || slug === "activity-areas" || slug === "arms" || slug === "tv") && (
         <div className="absolute inset-0">
           <img
@@ -254,7 +254,7 @@ export function ArchitecturePage({ slug }: { slug: string }) {
         <p className="eyebrow">{spec.eyebrow}</p>
         <h1 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.6] tracking-tight md:text-[50px]">{spec.title}</h1>
         <ExpandableIntro text={spec.intro} expanded={slug !== "arms"} />
-        {spec.cta && <div className="mt-8"><a className="btn-primary px-6 py-3 text-[13px]" href={spec.cta.href}>{spec.cta.label}</a></div>}
+        {spec.cta && <div className={`mt-7 ${slug === "tv" ? "w-full sm:w-auto" : ""}`}><a className={`btn-primary px-6 py-3 text-center text-[13px] ${slug === "tv" ? "flex w-full justify-center sm:inline-flex sm:w-auto" : ""}`} href={spec.cta.href}>{spec.cta.label}</a></div>}
       </div>
     </section>
 
