@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   const navigationGroups = [
     {
@@ -38,10 +40,10 @@ export function SiteFooter() {
     <footer className="site-footer" dir="rtl">
       <div className="container-site site-footer__grid">
         <div className="site-footer__brand">
-          <a href="/" className="site-footer__logo" aria-label="خورشید مفاخر">
+          <Link href="/" className="site-footer__logo" aria-label="خورشید مفاخر">
             <span className="site-footer__mark" aria-hidden="true">☼</span>
             <span>خورشید مفاخر</span>
-          </a>
+          </Link>
           <p>
             سازمان مردم‌نهاد، غیرانتفاعی و غیرسیاسی؛
             پیوند هنر، فرهنگ و مسئولیت اجتماعی برای خلق اثر ماندگار.
