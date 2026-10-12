@@ -132,6 +132,14 @@ article {
 
 /* Global card cleanup: remove frosted blur, soft halos and floating shadows. */
 .glass,
+.community-card,
+.arms-card,
+.mission-card,
+.mission-secondary-card,
+.corporate-options article,
+.solar-statement,
+.capacity-grid > div,
+.v2-panel,
 [class*="card"],
 [class*="Card"],
 [class*="panel"],
@@ -145,6 +153,13 @@ main [class*="rounded"] {
   box-shadow: none !important;
 }
 .glass:hover,
+.community-card:hover,
+.arms-card:hover,
+.mission-card:hover,
+.mission-secondary-card:hover,
+.solar-statement:hover,
+.capacity-grid > div:hover,
+.v2-panel:hover,
 [class*="card"]:hover,
 [class*="Card"]:hover,
 [class*="panel"]:hover,
