@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const aboutNavigation = [
   ["درباره خورشید", "/about"],
@@ -69,10 +70,10 @@ export function GlobalNavigation() {
   return (
     <header ref={navRef} className="khorshid-global-header fixed inset-x-0 top-0 z-[200]">
       <div className="container-site flex min-h-[72px] items-center justify-between gap-3 lg:gap-6">
-        <a href="/" onClick={() => { setOpen(null); setMobileOpen(false); }} className="flex shrink-0 items-center gap-3 font-bold text-[15px] text-[#020C21]">
+        <Link href="/" onClick={() => { setOpen(null); setMobileOpen(false); }} className="flex shrink-0 items-center gap-3 font-bold text-[15px] text-[#020C21]">
           <span className="grid h-9 w-9 shrink-0 place-items-center text-[#4A78B0]"><SunIcon /></span>
           <span>خورشید مفاخر</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-1.5 text-[14px] font-medium text-[#020C21] lg:flex" aria-label="منوی اصلی">
           {renderDropdown("درباره خورشید", "", aboutNavigation, "about")}
