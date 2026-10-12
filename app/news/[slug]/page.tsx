@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import { getAnnouncementBySlug } from "@/lib/announcements";
@@ -121,7 +122,7 @@ export default async function NewsDetailPage({
               <div className="news-detail__content">
                 {item.content.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-              <a className="btn-secondary" href="/news">← بازگشت به اخبار و اطلاعیه‌ها</a>
+              <Link className="btn-secondary" href="/news">← بازگشت به اخبار و اطلاعیه‌ها</Link>
             </div>
 
             <aside className="event-facts" aria-label="اطلاعات اطلاعیه">
