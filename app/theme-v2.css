@@ -96,3 +96,35 @@ footer .text-white,footer [class*="text-[#020C21]"]{color:var(--ink)!important}
   .v2-stats{flex-wrap:wrap;gap:calc(18*var(--u))}.v2-stats strong{font-size:calc(80*var(--u))}.v2-stats span{font-size:calc(22*var(--u))}.v2-btn{font-size:calc(24*var(--u))}
 }
 @media (prefers-reduced-motion:reduce){.v2-bg{animation:none}}
+
+
+/* Sync pass: remove frosted-glass blur from cards throughout the public site. */
+.glass,
+[class*="card"],
+[class*="Card"],
+[class*="tile"],
+[class*="Tile"],
+article,
+main [class*="rounded"] {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+.glass,
+[class*="card"],
+[class*="Card"],
+[class*="tile"],
+[class*="Tile"],
+article {
+  background-image: none;
+}
+@media (max-width: 767px) {
+  .container-site {
+    width: min(100% - 1.25rem, 1240px);
+  }
+  main [class*="grid"] {
+    min-width: 0;
+  }
+  main img, main video, main iframe {
+    max-width: 100%;
+  }
+}
