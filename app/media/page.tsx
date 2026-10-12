@@ -181,12 +181,12 @@ export default function MediaPage() {
                 خبرها و روایت‌های منتشرشده از فعالیت‌های خورشید در صفحه اخبار
                 دنبال می‌شوند. اینجا قرار نیست نسخه دوم صفحه اخبار بسازیم.
               </p>
-              <a
+              <Link
                 href="/news"
                 className="mt-5 inline-flex text-[13px] font-bold text-[#4A78B0] transition hover:text-white"
               >
                 مشاهده اخبار و روایت‌ها <span className="mr-2">←</span>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
