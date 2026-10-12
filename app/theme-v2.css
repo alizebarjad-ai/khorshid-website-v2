@@ -128,3 +128,29 @@ article {
     max-width: 100%;
   }
 }
+
+
+/* Global card cleanup: remove frosted blur, soft halos and floating shadows. */
+.glass,
+[class*="card"],
+[class*="Card"],
+[class*="panel"],
+[class*="Panel"],
+[class*="tile"],
+[class*="Tile"],
+article,
+main [class*="rounded"] {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+.glass:hover,
+[class*="card"]:hover,
+[class*="Card"]:hover,
+[class*="panel"]:hover,
+[class*="Panel"]:hover,
+[class*="tile"]:hover,
+[class*="Tile"]:hover,
+article:hover {
+  box-shadow: none !important;
+}
