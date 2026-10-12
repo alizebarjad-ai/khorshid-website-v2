@@ -9,6 +9,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: khorshid_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d khorshid_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/khorshid_test?schema=public
 
     steps:
       - name: Checkout
@@ -22,6 +38,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Prepare test database
+        run: npx prisma db push
+
+      - name: Lint
+        run: npm run lint
 
       - name: Build
         run: npm run build
