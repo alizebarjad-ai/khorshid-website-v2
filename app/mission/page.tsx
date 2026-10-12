@@ -11,7 +11,7 @@ function ExpandableText({
   more: ReactNode;
 }) {
   return (
-    <div className="space-y-4 text-[14px] leading-8 text-[#4D5B77]">
+    <div className="space-y-3 md:space-y-4 text-[14px] leading-8 text-[#4D5B77]">
       <p>{paragraphs[0]}</p>
       <p>{paragraphs[1]}</p>
       <details className="group pt-1">
@@ -80,14 +80,14 @@ export default function MissionPage() {
     <SiteShell>
       <PageStructuredData path="/mission" />
       <main>
-        <section className="relative min-h-[620px] overflow-hidden border-b border-white/10">
+        <section className="relative min-h-[540px] md:min-h-[620px] overflow-hidden border-b border-white/10">
           <img
             src="/images/mission/mission-hero.jpg"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="container-site relative flex min-h-[620px] items-end py-16 md:py-24">
+          <div className="container-site relative flex min-h-[540px] md:min-h-[620px] items-end py-10 md:py-24">
             <div className="max-w-4xl">
               <p className="eyebrow">مأموریت و چشم‌انداز</p>
               <h1 className="mt-4 max-w-4xl text-[34px] font-extrabold leading-[1.6] tracking-tight md:text-[54px]">
@@ -106,8 +106,8 @@ export default function MissionPage() {
           </div>
         </section>
 
-        <div className="container-site py-14 md:py-20">
-          <section className="border-t border-white/8 pt-16 md:pt-20">
+        <div className="container-site py-10 md:py-20">
+          <section className="border-t border-white/8 pt-10 md:pt-20">
             <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
               <div>
                 <p className="eyebrow">مأموریت خورشید</p>
@@ -125,18 +125,18 @@ export default function MissionPage() {
             </div>
           </section>
 
-          <section className="mt-20 border-t border-white/8 pt-16 md:mt-24 md:pt-20">
+          <section className="mt-14 border-t border-white/8 pt-10 md:mt-24 md:pt-20">
             <div className="max-w-3xl">
               <p className="eyebrow">سه محور مأموریت</p>
               <h2 className="mt-2 text-[28px] font-extrabold leading-[1.6] md:text-[38px]">
                 مأموریت خورشید در سه مسیر اصلی
               </h2>
             </div>
-            <div className="mt-10 grid gap-4 lg:grid-cols-3">
+            <div className="mt-7 grid gap-3 md:mt-10 md:gap-4 lg:grid-cols-3">
               {missionAxes.map(({ title, text }, index) => (
-                <article key={title} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025] p-7 transition hover:border-[#4A78B0]/30 hover:bg-white/[0.04]">
+                <article key={title} className="group relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.025] p-5 md:p-7 transition hover:border-[#4A78B0]/30 hover:bg-white/[0.04]">
                   <span className="text-[12px] font-bold text-[#4A78B0]">۰{index + 1}</span>
-                  <h3 className="mt-5 text-[21px] font-bold leading-8">{title}</h3>
+                  <h3 className="mt-3 md:mt-5 text-[20px] md:text-[21px] font-bold leading-8">{title}</h3>
                   <p className="mt-4 text-[13px] leading-8 text-[#4D5B77]">{text}</p>
                 </article>
               ))}
@@ -159,7 +159,7 @@ export default function MissionPage() {
                 <div className="absolute right-[19px] top-4 bottom-4 w-px bg-gradient-to-b from-[#4A78B0]/0 via-[#4A78B0]/35 to-[#4A78B0]/0 md:right-1/2 md:translate-x-1/2" />
                 <div className="space-y-4">
                   {impactSteps.map(([title, text], index) => (
-                    <div key={title} className="relative grid grid-cols-[44px_1fr] items-start gap-4 rounded-2xl border border-white/8 bg-white/[0.02] p-4 md:grid-cols-[56px_1fr] md:gap-5">
+                    <div key={title} className="relative grid grid-cols-[40px_minmax(0,1fr)] md:grid-cols-[56px_1fr] items-start gap-3 md:gap-5 rounded-2xl border border-white/8 bg-white/[0.02] p-3 md:p-4">
                       <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-[#4A78B0]/30 bg-[#0a0d11] text-[11px] font-bold text-[#4A78B0] md:h-12 md:w-12">
                         ۰{index + 1}
                       </div>
@@ -177,7 +177,7 @@ export default function MissionPage() {
           <section className="mt-20 border-t border-white/8 pt-16 md:mt-24 md:pt-20">
             <div className="relative overflow-hidden rounded-3xl border border-white/10">
               <div className="absolute inset-0 bg-gradient-to-l from-[#4A78B0]/10 via-transparent to-transparent" />
-              <div className="relative grid gap-10 p-7 md:p-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+              <div className="relative grid gap-6 md:gap-10 p-5 md:p-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
                 <div>
                   <p className="eyebrow">چشم‌انداز</p>
                   <h2 className="mt-3 text-[29px] font-extrabold leading-[1.6] md:text-[42px]">
@@ -195,7 +195,7 @@ export default function MissionPage() {
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <div className="mt-6 md:mt-8 grid gap-4 md:grid-cols-3">
               {visionPillars.map(([title, text]) => (
                 <article key={title} className="border-t border-[#4A78B0]/25 pt-5">
                   <h3 className="text-[18px] font-bold">{title}</h3>
@@ -216,9 +216,9 @@ export default function MissionPage() {
               </p>
             </div>
 
-            <div className="mt-10 divide-y divide-white/8 border-y border-white/8">
+            <div className="mt-7 md:mt-10 divide-y divide-white/8 border-y border-white/8">
               {values.map(([title, text], index) => (
-                <div key={title} className="grid gap-3 py-6 md:grid-cols-[70px_0.6fr_1.4fr] md:items-center">
+                <div key={title} className="grid gap-2 md:gap-3 py-4 md:py-6 md:grid-cols-[70px_0.6fr_1.4fr] md:items-center">
                   <span className="text-[11px] font-bold text-[#4A78B0]">۰{index + 1}</span>
                   <h3 className="text-[17px] font-bold">{title}</h3>
                   <p className="text-[13px] leading-7 text-[#4D5B77]">{text}</p>
@@ -227,8 +227,8 @@ export default function MissionPage() {
             </div>
           </section>
 
-          <section className="mt-20 md:mt-24">
-            <div className="relative overflow-hidden rounded-3xl border border-[#4A78B0]/20 bg-[#4A78B0]/5 px-6 py-10 md:px-12 md:py-12">
+          <section className="mt-14 md:mt-24">
+            <div className="relative overflow-hidden rounded-3xl border border-[#4A78B0]/20 bg-[#4A78B0]/5 px-5 py-8 md:px-12 md:py-12">
               <p className="eyebrow">از ایده تا اثر</p>
               <h2 className="mt-3 max-w-3xl text-[27px] font-extrabold leading-[1.7] md:text-[40px]">
                 خورشید می‌خواهد میان هنر، انسان و جامعه ارتباطی ایجاد کند که در عمل دیده شود.
