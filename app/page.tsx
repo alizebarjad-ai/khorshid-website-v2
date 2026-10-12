@@ -5,7 +5,7 @@ import { getActiveAnnouncements, getImportantAnnouncement } from "@/lib/announce
 export const metadata = {
   alternates: { canonical: "/" },
   title: { absolute: "سازمان مردم‌نهاد خورشید مفاخر | هنر، فرهنگ و اثرگذاری اجتماعی" },
-  description: "سازمان مردم‌نهاد خورشید مفاخر؛ پیوند هنر، فرهنگ و مسئولیت اجتماعی برای حمایت از هنرمندان و طراحی و اجرای پروژه‌های اثرگذار اجتماعی.",
+  description: "سازمان مردم‌نهاد خورشید مفاخر؛ پاسداشت منزلت هنرمندان و میراث هنری و گسترش نقش فرهنگ و هنر در زندگی اجتماعی.",
 };
 
 export const revalidate = 60;
