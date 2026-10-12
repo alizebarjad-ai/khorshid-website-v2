@@ -899,3 +899,162 @@ main,.site-grid,.dark-section,.hero-dark{background-color:transparent!important}
   .event-content{grid-template-columns:1fr;gap:1.5rem;padding-top:3rem;padding-bottom:3.5rem}
   .event-facts{position:static}
 }
+
+
+/* Synced mobile refinements from the main site. */
+/* About page mobile UX refinements */
+@media(max-width:767px){
+  .about-page > section:first-of-type{
+    min-height:0!important;
+  }
+  .about-page > section:first-of-type > .container-site{
+    min-height:500px!important;
+    padding-top:68px;
+    padding-bottom:42px;
+  }
+  .about-page > section:first-of-type h1{
+    font-size:clamp(28px,7.5vw,34px)!important;
+    line-height:1.5!important;
+  }
+  .about-page > section:first-of-type .container-site > div{
+    padding-top:52px;
+    padding-bottom:42px;
+  }
+  .about-page > .container-site{
+    padding-top:38px!important;
+    padding-bottom:38px!important;
+  }
+  .about-page > .container-site > section[class*="mt-20"],
+  .about-page > .container-site > section[class*="md:mt-24"]{
+    margin-top:48px!important;
+    padding-top:38px!important;
+  }
+  .about-page .about-arms-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    margin-top:22px;
+  }
+  .about-page .about-arm-card{
+    min-width:0;
+    padding:13px;
+    border-radius:15px;
+  }
+  .about-page .about-arm-card > div:first-child{
+    height:116px;
+    margin-left:-13px;
+    margin-right:-13px;
+    margin-top:-13px;
+    margin-bottom:12px;
+    border-radius:15px 15px 0 0;
+  }
+  .about-page .about-arm-card h3{
+    font-size:15px!important;
+    line-height:1.65!important;
+    overflow-wrap:anywhere;
+  }
+  .about-page .about-arm-card p{
+    font-size:12px!important;
+    line-height:1.8!important;
+  }
+  .about-page .about-arm-card > span{
+    margin-top:12px;
+    min-height:44px;
+    font-size:12px;
+  }
+  .about-page .btn-primary,
+  .about-page .btn-secondary{
+    min-height:44px;
+    padding:10px 14px!important;
+    font-size:12px!important;
+    text-align:center;
+  }
+  .about-page details summary{
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    width:fit-content;
+  }
+  .about-page .rounded-2xl.p-7{
+    padding:20px;
+  }
+  .about-page .rounded-3xl.px-6.py-12{
+    padding:28px 16px;
+  }
+  .about-page a.mt-4,
+  .about-page a.mt-5{
+    min-height:44px;
+    align-items:center;
+    gap:6px;
+  }
+  .about-page .about-arm-card{
+    display:block;
+  }
+  .about-page .about-arm-card > span{
+    display:inline-flex;
+    align-items:center;
+  }
+  .about-page .about-arm-card > div:first-child img{
+    display:block;
+  }
+}
+@media(max-width:360px){
+  .about-page .about-arms-grid{
+    grid-template-columns:1fr;
+  }
+  .about-page .about-arm-card > div:first-child{
+    height:160px;
+  }
+  .about-page > section:first-of-type > .container-site{
+    min-height:470px!important;
+  }
+}
+
+
+/* Consistent public-site CTA behavior on mobile. Keep utility links and desktop layouts untouched. */
+@media(max-width:767px){
+  main a.btn-primary,
+  main a.btn-secondary,
+  main button.btn-primary,
+  main button.btn-secondary{
+    display:flex;
+    width:100%;
+    max-width:100%;
+    min-height:44px;
+    flex:0 0 100%;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    white-space:normal;
+  }
+  main .mission-cta-actions a{
+    display:flex;
+    width:100%;
+    min-height:44px;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+  }
+  .announcement-modal__actions{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  .announcement-modal__actions .announcement-primary,
+  .announcement-modal__actions .announcement-secondary{
+    width:100%;
+    flex:0 0 auto;
+    min-height:44px;
+  }
+}
+
+/* Match the approved mobile page background; desktop remains unchanged. */
+@media (max-width: 767px) {
+  body { background: #16334F !important; background-image: none !important; background-attachment: scroll !important; }
+  body::before { background: #16334F !important; background-image: none !important; }
+  .v2-hero .v2-bg { display: none !important; }
+  .v2-hero { background: #16334F !important; }
+  .v2-hero-inner { min-width: 0; }
+  .v2-hero-copy { min-width: 0; }
+  .v2-actions { width: 100%; flex-wrap: wrap; }
+  .v2-actions .v2-btn { flex: 1 1 100%; width: 100%; min-height: 44px; justify-content: center; text-align: center; }
+}
