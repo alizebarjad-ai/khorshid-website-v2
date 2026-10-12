@@ -30,7 +30,22 @@ export default function AnnouncementsAdmin() {
     setLoading(false);
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => {
+    let cancelled = false;
+    async function initialLoad() {
+      try {
+        const r = await fetch("/api/admin/announcements");
+        if (r.ok) {
+          const data = await r.json();
+          if (!cancelled) setItems(data.announcements);
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    }
+    initialLoad();
+    return () => { cancelled = true; };
+  }, []);
 
   function edit(x: Announcement) {
     setEditing(x);
